@@ -1,0 +1,18 @@
+.navbar-brand {
+	display: flex;
+	align-items: center;
+	color: $body-color;
+
+	.icon-logo {
+		font-size: 28px;
+		color: $primary;
+		margin-right: 10px;
+		transition: 0.3s;
+	}
+
+	.logo-text {
+		font-size: 0.875rem;
+		font-weight: 400;
+		transition: 0.3s;
+	}
+}

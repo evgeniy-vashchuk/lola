@@ -1,0 +1,99 @@
+.main-title {
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-right: 30px;
+
+	.section-title {
+		margin-bottom: 0;
+	}
+
+	.section-title:nth-child(2) {
+		display: block;
+	}
+}
+
+.section-title {
+	font-size: 1.875rem;
+	font-weight: 300;
+	color: $white;
+	background-color: $secondary;
+	display: inline-block;
+	line-height: 1.2;
+	padding: 10px;
+	margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 991px) {
+	.section-title {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.main-title {
+		margin-right: 15px;
+	}
+	.section-title {
+		font-size: 1.1rem;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.main-title {
+		margin-bottom: 40px;
+	}
+}
+
+.small-title {
+	font-size: 1rem;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	letter-spacing: 1.6px;
+	margin-bottom: 0.625rem;
+	position: relative;
+}
+
+.title-description {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	letter-spacing: 1.6px;
+	line-height: 1.5;
+	margin-bottom: 4.0625rem;
+}
+
+@media only screen and (max-width: 991px) {
+	.title-description {
+		margin-bottom: 3.125rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.title-description {
+		margin-bottom: 2rem;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.title-description {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.text-block {
+	p {
+		margin-bottom: 2.5rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.text-block {
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+p {
+	margin-bottom: 0.625rem;
+}

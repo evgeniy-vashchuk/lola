@@ -1,0 +1,127 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+
+	.header-container {
+		transition: 0.3s;
+
+		&.small {
+			.navbar {
+				padding-top: 0.625rem;
+				padding-bottom: 0.625rem;
+			}
+		}
+		&.filled {
+			background-color: $secondary;
+			.navbar {
+				.navbar-nav {
+					.nav-link {
+						color: $white;
+					}
+				}
+			}
+
+			.navbar-brand {
+				.icon-logo {
+					color: $white;
+				}
+				.logo-text {
+					color: $white;
+				}
+			}
+
+			.navbar-icon {
+				background-color: $white;
+			}
+		}
+	}
+
+	&-menu {
+		font-size: 0;
+		margin-bottom: 0;
+		li {
+			display: inline-block;
+			margin-left: 20px;
+			&:first-child {
+				margin-left: 0;
+			}
+			a {
+				font-family: 'Roboto Condensed', sans-serif;
+				color: $body-color;
+				opacity: 0.5;
+				transition: 0.3s;
+				font-size: 1rem;
+				letter-spacing: 1.6px;
+				&:hover {
+					opacity: 1;
+				}
+
+				&.active {
+					color: $primary;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.navbar {
+	transition: 0.5s;
+	.navbar-nav {
+		.nav-item {
+			margin-left: 20px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+		.nav-link {
+			padding: 0;
+			font-family: 'Roboto Condensed', sans-serif;
+			color: $body-color;
+			opacity: 0.5;
+			transition: 0.3s;
+			font-size: 1rem;
+			letter-spacing: 1.6px;
+			display: inline-block;
+			&:hover {
+				opacity: 1;
+			}
+
+			&.active {
+				color: $primary;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// menu on home page
+@media only screen and (max-width: 991px) {
+	.header-home {
+		.navbar-collapse {
+			.navbar-nav {
+				padding-top: 20px;
+				padding-bottom: 10px;
+			}
+			.nav-item {
+				margin-left: 0;
+				text-align: right;
+			}
+
+			.nav-link {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.navbar {
+		padding-top: 0.625rem;
+		padding-bottom: 0.625rem;
+	}
+}

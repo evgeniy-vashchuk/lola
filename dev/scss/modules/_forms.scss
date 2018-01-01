@@ -1,0 +1,95 @@
+/* FORMS ============================ */
+
+.form-control {
+	height: 50px;
+}
+
+textarea.form-control {
+	height: 100px;
+	resize: none;
+	padding-top: 15px;
+	display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+textarea.form-control {
+	width: 100%;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+}
+
+input:focus+label,
+textarea:focus+label,
+input.active+label,
+textarea.active+label {
+	top: -8px;
+	font-size: 0.7rem;
+}
+
+.form-group {
+	position: relative;
+	label {
+		position: absolute;
+		left: 0;
+		top: 10px;
+		cursor: text;
+		transition: 0.5s;
+	}
+}
+
+// BOTTOM BAR LOADING
+
+.bar {
+	position: relative;
+	top: 1px;
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	&:before {
+		content: '';
+		height: 2px;
+		width: 0;
+		bottom: 1px;
+		position: absolute;
+		background-color: $primary;
+		transition: width 1s ease;
+	}
+	&:before {
+		left: 0%;
+	}
+}
+
+input:focus~.bar:before,
+textarea:focus~.bar:before {
+	width: 100%;
+}
+
+// BOTTOM BAR LOADING END
+
+// BOTTOM TRIANGLE ANIMATION
+
+.textarea-triangle {
+	position: relative;
+	&:after {
+		content: '';
+		@include arr(10, 10, $secondary, br);
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		@include tr(0.3s);
+	}
+}
+
+.triangle-fill {
+	&:after {
+		@include tr(0.3s);
+		@include arr(10, 10, $primary, br);
+	}
+}
+
+// BOTTOM TRIANGLE ANIMATION
