@@ -3,6 +3,7 @@
 	border: none;
 	text-decoration: none;
 	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
 	border-radius: 0;
 	text-align: center;
 	position: relative;
@@ -47,6 +48,30 @@
 			padding: 5px;
 			min-height: 40px;
 		}
+	}
+}
+
+.btn-underline {
+	display: inline-block;
+	border: none;
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	border-radius: 0;
+	text-align: center;
+	position: relative;
+	outline: none;
+	transition: .35s;
+	border: none;
+	border-bottom: 1px solid #424242;
+
+	&-md {
+		font-size: 1rem;
+		letter-spacing: 1.6px;
+		font-weight: 400;
+	}
+
+	&-secondary {
+		color: $body-color;
 	}
 }
 

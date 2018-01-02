@@ -117,7 +117,7 @@ $(document).ready(function() {
 	getScrollBarWidth();
 
 	// GALLERY POP-UP INIT
-	$('.gallery-slider').slickLightbox({
+	$('.gallery-pop-up').slickLightbox({
 		itemSelector: '.square-block',
 		navigateByKeyboard: true,
 		background: "rgba(255,255,255,.9)",
@@ -180,31 +180,6 @@ $(document).ready(function() {
 		$(".textarea-triangle").removeClass('triangle-fill');
 	});
 
-	// ANIMATION OF ELEMENTS IN LEFT
-	function textAnimation(){
-		var waypoints = $('.animation-item').waypoint({
-			handler: function() {
-				$(this.element).removeClass("left-animation");
-				$(this.element).removeClass("right-animation");
-			},
-			offset: '80%'
-		})
-	}
-
-	// ANIMATION FOR BOTTOM ELEMENTS
-	function textAnimationBottom(){
-		var waypoints = $('.animation-item-bottom').waypoint({
-			handler: function() {
-				$(this.element).removeClass("left-animation");
-				$(this.element).removeClass("right-animation");
-			},
-			offset: 'bottom-in-view'
-		})
-	}
-
-	textAnimation();
-	textAnimationBottom();
-
 	// HUMBURGER BUTTON OPEN/CLOSE
 	// when menu is open
 	$('#main_navbar').on('show.bs.collapse', function () {
@@ -223,5 +198,108 @@ $(document).ready(function() {
 	$(".main").on('click' , function(){
 		$('#main_navbar').collapse('hide');
 	});
+
+	// PRELOADER CLICK - CLOSE
+	$('.preloader-wrapper').on('click' , function(){
+		$('.preloader-wrapper').fadeOut(700);
+	});
+
+	// SKILLS BARS
+	var stopFunction = false;
+
+	function barsAnimation(){
+		if (stopFunction == false) {
+			var barsDuration = 3500;
+			stopFunction = true;
+
+			$('.skills-bars .skills-bars-item').each(function(){
+				var $percent = $(this).find(".bar-strip-fill").attr('data-percentage');
+
+				// bar fill animation
+				$(this).find('.bar-strip-fill').animate({
+					width: $percent + "%"
+				}, barsDuration);
+
+				// number count animation
+				var $numberItem = $(this).find(".percent");
+
+				$({ Counter: 0 }).animate({ Counter: $percent }, {
+					duration: barsDuration,
+					easing: 'swing',
+					step: function () {
+						$numberItem.text(Math.ceil(this.Counter));
+					}
+				});
+			});
+		}
+	}
+
+	var waypoints = $('.skills-bars').waypoint({
+		handler: function() {
+			barsAnimation();
+		},
+		offset: '80%'
+	})
+
+	// COUNT UP NUMBERS
+	$.each($('.achievements-items-wrap .section-title'), function () {
+		var options = {
+			useEasing: true, 
+			useGrouping: true, 
+			separator: '', 
+			decimal: '.', 
+		};
+		var count = $(this).data('count'),
+			numAnim = new CountUp(this, 0, count, 0, 5, options);
+
+		var waypoints = $('.achievements-item').waypoint({
+			handler: function(direction) {
+				numAnim.start();
+			},
+			offset: '80%'
+		})
+	});
+
+});
+
+// PRELOADER
+$(window).on('load', function () {
+
+	// ANIMATION OF ELEMENTS
+	function textAnimation(){
+		var waypoints = $('.animation-item').waypoint({
+			handler: function() {
+				$(this.element).removeClass("left-animation");
+				$(this.element).removeClass("right-animation");
+			},
+			offset: '90%'
+		})
+	}
+
+	// ANIMATION FOR BOTTOM ELEMENTS
+	function textAnimationBottom(){
+		var waypoints = $('.animation-item-bottom').waypoint({
+			handler: function() {
+				$(this.element).removeClass("left-animation");
+				$(this.element).removeClass("right-animation");
+			},
+			offset: 'bottom-in-view'
+		})
+	}
+
+	if($('.preloader-wrapper').length){
+		// PRELOADER
+		setTimeout(function() {
+			$('.preloader-wrapper').fadeOut(500, function() {});
+
+			// animation text
+			textAnimation();
+			textAnimationBottom();
+		}, 2000);
+	} else {
+		// animation text
+		textAnimation();
+		textAnimationBottom();
+	}
 
 });

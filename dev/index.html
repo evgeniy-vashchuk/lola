@@ -30,8 +30,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet">
 
 	<!-- connection CSS -->
-	<!-- <link rel="stylesheet" href="libs/bootstrap4/bootstrap.min.css"> -->
-
 	<link rel="stylesheet" href="libs/icomoon/style.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick-lightbox/slick-lightbox.css">
@@ -40,6 +38,16 @@
 </head>
 
 <body data-spy="scroll" data-target="#main_navbar" data-offset="100">
+
+	<!-- PRELOADER -->
+	<div class="preloader-wrapper">
+		<div class="square-loader">
+			<div class="square first_square"></div>
+			<div class="square second_square"></div>
+			<div class="square third_square"></div>
+		</div> 
+	</div>
+	<!-- PRELOADER END -->
 
 	<!-- BACKGROUND GRID -->
 	<div class="bg-grid">
@@ -226,7 +234,7 @@
 										<img src="img/svg/performing_icon_1.svg" alt="icon">
 										<div class="performing-item-inner-wrap">
 											<div class="performing-item-inner-container">
-												<h5 class="small-title small-title-icon">Training
+												<h5 class="small-title">Training
 												</h5>
 												<div class="text-block">
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod.</p>
@@ -241,7 +249,7 @@
 										<img src="img/svg/performing_icon_2.svg" alt="icon">
 										<div class="performing-item-inner-wrap">
 											<div class="performing-item-inner-container">
-												<h5 class="small-title small-title-icon">Calculating
+												<h5 class="small-title">Calculating
 												</h5>
 												<div class="text-block">
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
@@ -256,7 +264,7 @@
 										<img src="img/svg/performing_icon_3.svg" alt="icon">
 										<div class="performing-item-inner-wrap">
 											<div class="performing-item-inner-container">
-												<h5 class="small-title small-title-icon">Tracking
+												<h5 class="small-title">Tracking
 												</h5>
 												<div class="text-block">
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod.</p>
@@ -271,7 +279,7 @@
 										<img src="img/svg/performing_icon_4.svg" alt="icon">
 										<div class="performing-item-inner-wrap">
 											<div class="performing-item-inner-container">
-												<h5 class="small-title small-title-icon">Invention
+												<h5 class="small-title">Invention
 												</h5>
 												<div class="text-block">
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
@@ -286,7 +294,7 @@
 										<img src="img/svg/performing_icon_5.svg" alt="icon">
 										<div class="performing-item-inner-wrap">
 											<div class="performing-item-inner-container">
-												<h5 class="small-title small-title-icon">Control
+												<h5 class="small-title">Control
 												</h5>
 												<div class="text-block">
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod.</p>
@@ -478,7 +486,7 @@
 						</div>
 						<!-- SLIDER ARROWS END -->
 
-						<div class="gallery-slider -slider-init">
+						<div class="gallery-slider gallery-pop-up -slider-init">
 							<div class="animation-item-wrap">
 								<div class="gallery-item img-decoration img-decoration-sm img-decoration-left animation-item left-animation">
 									<a href="img/gallery-slider/gallery_img_1.jpg" class="square-block">
@@ -1074,7 +1082,7 @@
 							<!-- MAIN FORM -->
 							<form>
 								<div class="row no-gutters">
-									<div class="col-9 col-sm-6">
+									<div class="col-9 col-sm-6 form-label-help">
 										<div class="form-group animation-item left-animation">
 											<input type="email" class="form-control" id="contact-name" >
 											<label for="contact-name">Name</label>
@@ -1088,7 +1096,7 @@
 										</div>
 									</div>
 
-									<div class="col-12">
+									<div class="col-12 form-label-help">
 										<div class="form-group textarea-triangle animation-item left-animation">
 											<textarea class="form-control" id="contact-message" rows="3"></textarea>
 											<label for="contact-message">Message</label>

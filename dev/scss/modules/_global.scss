@@ -3,6 +3,22 @@
 	z-index: 10;
 }
 
+.main-page {
+	padding-top: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+	.main-page {
+		padding-top: 80px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.main-page {
+		padding-top: 60px;
+	}
+}
+
 .img-decoration {
 	position: relative;
 	padding-top: 10px;
@@ -42,6 +58,14 @@
 		&.img-decoration-left, &.img-decoration-right {
 			&:before {
 				width: 55%;
+			}
+		}
+	}
+
+	&-xl {
+		&.img-decoration-left, &.img-decoration-right {
+			&:before {
+				width: 33%;
 			}
 		}
 	}

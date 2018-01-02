@@ -137,6 +137,7 @@
 // SECTION GALLERY
 
 .gallery-item {
+	margin-bottom: 50px;
 	.square-block {
 		display: block;
 		overflow: hidden;
@@ -152,7 +153,7 @@
 
 	.bar {
 		position: absolute;
-		top: -10px;
+		top: 0;
 		left: 0;
 		height: 10px;
 		width: 0;
@@ -205,31 +206,20 @@
 			top: 0;
 		}
 	}
-
-	.bar {
-		top: 0;
-	}
 }
 
 .section-gallery {
-	.animation-item-wrap {
-		padding-right: 15px;
-	}
-
 	.gallery-slider {
 		font-size: 0;
-		.gallery-item {
-			margin-bottom: 50px;
-		}
-
-		.slick-list {
-			padding-top: 10px;
-		}
 	}
 
 	.slider-animation-wrap {
 		position: relative;
 	}
+}
+
+.animation-item-wrap {
+	padding-right: 15px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -241,12 +231,9 @@
 }
 
 @media only screen and (max-width: 575px) {
-	.section-gallery {
-		.gallery-slider {
-			.gallery-item {
-				margin-bottom: 25px;
-			}
-		}
+
+	.gallery-item {
+		margin-bottom: 25px;
 	}
 }
 
@@ -414,12 +401,6 @@ $slider-nav-animation-time: 0.5s;
 
 // SECTION BLOG
 
-.section-blog {
-	.img-decoration {
-		margin-bottom: 15px;
-	}
-}
-
 .blog-item {
 	margin-bottom: 50px;
 	.blog-item-text {
@@ -445,6 +426,9 @@ $slider-nav-animation-time: 0.5s;
 @media only screen and (max-width: 575px) {
 	.blog-item {
 		margin-bottom: 30px;
+		.img-decoration {
+			margin-bottom: 15px;
+		}
 	}
 }
 
@@ -452,7 +436,7 @@ $slider-nav-animation-time: 0.5s;
 
 // SECTION CONTACT
 
-.section-contact {
+.section-contact, .section-contacts-main {
 	.contact-list {
 		column-count: 3;
 		column-gap: 0px;
@@ -464,7 +448,7 @@ $slider-nav-animation-time: 0.5s;
 }
 
 @media only screen and (max-width: 991px) {
-	.section-contact {
+	.section-contact, .section-contacts-main {
 		.contact-list {
 			column-count: 1;
 		}

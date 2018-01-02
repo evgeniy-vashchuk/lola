@@ -48,6 +48,10 @@
 
 // PAGES
 @import "pages/home";
+@import "pages/about";
+@import "pages/blog";
+@import "pages/blog-inside";
+@import "pages/gallery";
 
 // MODULES
 @import "modules/typography";
@@ -65,3 +69,7 @@
 @import "modules/hamburger-btn";
 @import "modules/side-animation";
 @import "modules/slick-arrows";
+@import "modules/preloader";
+@import "modules/scroll-styling";
+@import "modules/skills-bars";
+@import "modules/pagination";

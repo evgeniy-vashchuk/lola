@@ -1,0 +1,172 @@
+// SECTION ABOUT ME
+
+.section-about-me {
+	.img-wrap {
+		padding-top: 120px;
+	}
+
+	.text-block {
+		padding-bottom: 150px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.section-about-me {
+		.img-wrap {
+			padding-top: 0;
+		}
+
+		.text-block {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+// SECTION ABOUT ME END
+
+// SECTION ADVANTAGES
+
+.section-advantages {
+	margin-top: -250px;
+}
+
+@media only screen and (max-width: 991px) {
+	.section-advantages {
+		margin-top: -220px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.section-advantages {
+		margin-top: -150px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.section-advantages {
+		margin-top: 0px;
+	}
+}
+
+.advantages-item {
+	position: relative;
+	margin-bottom: 2.5rem;
+	&-icon {
+		max-width: 50px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&-text {
+		padding-left: 70px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.advantages-item {
+		&-icon {
+			max-width: 35px;
+		}
+		&-text {
+			padding-left: 50px;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.advantages-item {
+		margin-bottom: 1rem;
+	}
+
+	.achievements-items-wrap {
+		margin-bottom: 20px;
+	}
+}
+
+// SECTION ADVANTAGES END
+
+// SECTION ACHIEVEMENTS
+
+.achievements-items-wrap {
+	.achievements-item {
+		margin-bottom: 2.5rem;
+
+		.text-block {
+			padding-right: 20px;
+			p {
+				margin-bottom: 0;
+				padding-right: 0;
+				display: inline-block;
+			}
+		}
+
+		.degree-title {
+			position: relative;
+			padding-right: 22px;
+			.degree {
+				font-size: 1rem;
+				position: absolute;
+				top: 4px;
+				right: 0px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.achievements-items-wrap {
+		.achievements-item {
+			.degree-title {
+				.degree {
+					top: 2px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.achievements-items-wrap {
+		.achievements-item {
+			margin-bottom: 1.25rem;
+			.degree-title {
+				padding-right: 17px;
+				.degree {
+					font-size: 0.7rem;
+					top: 1px;
+				}
+			}
+		}
+	}
+}
+
+// SECTION ACHIEVEMENTS END
+
+// SECTION AWARDS
+
+.section-awards {
+	&.section {
+		padding-bottom: 0;
+	}
+}
+
+.awards-logo-wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+
+.awards-logo {
+	max-width: 155px;
+	margin-bottom: 60px;
+	padding-right: 30px;
+	img {
+		@include img-res;
+	}
+}
+
+// SECTION AWARDS END
