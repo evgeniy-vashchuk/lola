@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'icomoon';
-  src: url("../../fonts/icomoon/icomoon.eot?qua8o1");
-  src: url("../../fonts/icomoon/icomoon.eot?qua8o1#iefix") format("embedded-opentype"), url("../../fonts/icomoon/icomoon.ttf?qua8o1") format("truetype"), url("../../fonts/icomoon/icomoon.woff?qua8o1") format("woff"), url("../../fonts/icomoon/icomoon.svg?qua8o1#icomoon") format("svg");
+  src: url("../../fonts/icomoon/icomoon.eot?4cmfyk");
+  src: url("../../fonts/icomoon/icomoon.eot?4cmfyk#iefix") format("embedded-opentype"), url("../../fonts/icomoon/icomoon.ttf?4cmfyk") format("truetype"), url("../../fonts/icomoon/icomoon.woff?4cmfyk") format("woff"), url("../../fonts/icomoon/icomoon.svg?4cmfyk#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -20,7 +20,22 @@
   -moz-osx-font-smoothing: grayscale; }
 
 .icon-logo:before {
+  content: ""; }
+
+.icon-performing_icon_5:before {
   content: ""; }
+
+.icon-performing_icon_1:before {
+  content: ""; }
+
+.icon-performing_icon_2:before {
+  content: ""; }
+
+.icon-performing_icon_3:before {
+  content: ""; }
+
+.icon-performing_icon_4:before {
+  content: ""; }
 
 .icon-send-button:before {
   content: ""; }

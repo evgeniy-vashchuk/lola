@@ -7,7 +7,7 @@
 
 	.blog-inside-title {
 		padding-right: 30px;
-		.small-title {
+		.title-of-topic {
 			margin-bottom: 1.25rem;
 		}
 	}
@@ -50,7 +50,7 @@
 		.blog-inside-title {
 			padding-right: 0;
 			margin-bottom: 10px;
-			.small-title {
+			.title-of-topic {
 				margin-bottom: 0rem;
 			}
 		}
@@ -86,6 +86,7 @@
 	align-items: center;
 
 	&:hover {
+		transition: 0.3s;
 		.btn-arrow {
 			color: $primary;
 		}

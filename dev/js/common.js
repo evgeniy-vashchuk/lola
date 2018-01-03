@@ -1,6 +1,16 @@
 $(document).ready(function() {
 
-	// SMALL TOP LINE + BUTTON TOP ANIMATION =================================
+	// SMOOTH TRANSITION BETWEEN PAGES
+	$(document).on("click", ".page-redirect", function(e) { 
+		e.preventDefault();
+		$("body").fadeOut(500);
+		var self = this;
+		setTimeout(function () {
+			window.location.href = $(self).attr("href"); 
+		}, 500);
+	});
+
+	// SMALL TOP LINE + BUTTON TOP ANIMATION
 	$(window).scroll(function() {
 		if ( $(this).scrollTop() > 0 ) {
 			$('.header-container').addClass('filled');
@@ -23,7 +33,7 @@ $(document).ready(function() {
 	var topLineHeight = $('.header').outerHeight();
 
 	// MENU LINKS SMOOTH SCROLL
-	$(".navbar .nav-item").on("click","a", function (event) {
+	$(".header-home .navbar .nav-item").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top - topLineHeight;
@@ -201,7 +211,11 @@ $(document).ready(function() {
 
 	// PRELOADER CLICK - CLOSE
 	$('.preloader-wrapper').on('click' , function(){
-		$('.preloader-wrapper').fadeOut(700);
+		$(this).fadeOut(700);
+	});
+
+	$('.preloader-wrap-for-page').on('click' , function(){
+		$(this).fadeOut(700);
 	});
 
 	// SKILLS BARS
@@ -287,8 +301,9 @@ $(window).on('load', function () {
 		})
 	}
 
-	if($('.preloader-wrapper').length){
-		// PRELOADER
+	// PRELOADER
+	if ($('.preloader-wrapper').length){
+		// PRELOADER FOR HOME PAGE
 		setTimeout(function() {
 			$('.preloader-wrapper').fadeOut(500, function() {});
 
@@ -296,10 +311,16 @@ $(window).on('load', function () {
 			textAnimation();
 			textAnimationBottom();
 		}, 2000);
+
 	} else {
-		// animation text
-		textAnimation();
-		textAnimationBottom();
+		// PRELOADER FOR OTHER PAGES
+		setTimeout(function() {
+			$('.preloader-wrap-for-page').fadeOut(500, function() {});
+
+			// animation text
+			textAnimation();
+			textAnimationBottom();
+		}, 500);
 	}
 
 });

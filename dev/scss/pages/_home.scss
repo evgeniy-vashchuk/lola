@@ -151,16 +151,6 @@
 		transition: 1s;
 	}
 
-	.bar {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 10px;
-		width: 0;
-		background-color: $primary;
-		transition: 1s;
-	}
-
 	.overlay {
 		position: absolute;
 		top: 0;
@@ -188,9 +178,6 @@
 		.overlay {
 			opacity: 1;
 		}
-		.bar {
-			width: 80%;
-		}
 	}
 }
 
@@ -198,13 +185,6 @@
 	.gallery-item {
 		transition: 0.8s;
 		transform: translate(0, 0);
-	}
-
-	.img-decoration {
-		padding-top: 10px;
-		&:before {
-			top: 0;
-		}
 	}
 }
 
@@ -408,6 +388,19 @@ $slider-nav-animation-time: 0.5s;
 	}
 	.blog-date {
 		margin-bottom: 40px;
+	}
+
+	.img-decoration {
+		a {
+			display: inline-block;
+		}
+	}
+
+	.small-title {
+		display: inline-block;
+		&:hover {
+			transition: 0.3s;
+		}
 	}
 }
 

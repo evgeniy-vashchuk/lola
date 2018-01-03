@@ -5,6 +5,7 @@
 	right: 0;
 	bottom: 0;
 	z-index: 1;
+	min-height: 100vh;
 	div {
 		height: 100%;
 	}
@@ -42,6 +43,5 @@
 				background-color: rgba(#020202, 0.1);
 			}
 		}
-
 	}
 }

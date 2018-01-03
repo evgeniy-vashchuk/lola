@@ -42,6 +42,41 @@
 				width: 80%;
 			}
 		}
+
+		&.img-decoration-hover {
+			&.img-decoration-left, &.img-decoration-right {
+				&:after {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					width: 0;
+					height: 10px;
+					transition: 1s;
+					background-color: $primary;
+				}
+			}
+
+			&.img-decoration-left {
+				&:after {
+					left: 0;
+				}
+			}
+
+			&.img-decoration-right {
+				&:after {
+					right: 0;
+				}
+			}
+
+			&:hover {
+				&.img-decoration-left, &.img-decoration-right {
+					&:after {
+						width: 80%;
+					}
+				}
+			}
+		}
 	}
 
 	&-md {
@@ -49,6 +84,41 @@
 		&.img-decoration-left, &.img-decoration-right {
 			&:before {
 				width: 90%;
+			}
+		}
+
+		&.img-decoration-hover {
+			&.img-decoration-left, &.img-decoration-right {
+				&:after {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					width: 0;
+					height: 10px;
+					transition: 1s;
+					background-color: $primary;
+				}
+			}
+
+			&.img-decoration-left {
+				&:after {
+					left: 0;
+				}
+			}
+
+			&.img-decoration-right {
+				&:after {
+					right: 0;
+				}
+			}
+
+			&:hover {
+				&.img-decoration-left, &.img-decoration-right {
+					&:after {
+						width: 90%;
+					}
+				}
 			}
 		}
 	}
@@ -65,7 +135,7 @@
 	&-xl {
 		&.img-decoration-left, &.img-decoration-right {
 			&:before {
-				width: 33%;
+				width: 33.33333%;
 			}
 		}
 	}

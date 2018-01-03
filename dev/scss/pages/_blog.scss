@@ -2,17 +2,6 @@
 	&.section {
 		padding-bottom: 0;
 	}
-
-	.blog-items-wrap {
-		position: relative;
-
-		.pagination-wrap {
-			overflow: hidden;
-			position: absolute;
-			top: 0;
-			right: -110px;
-		}
-	}
 }
 
 @media only screen and (max-width: 1200px) {
