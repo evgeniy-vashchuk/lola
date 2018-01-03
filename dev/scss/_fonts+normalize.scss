@@ -3,10 +3,6 @@
 
 /* FONTS ================================================ */
 
-@include font-face("RobotoRegular", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("RobotoItalic", "../fonts/RobotoItalic/RobotoItalic", normal, italic);
-@include font-face("RobotoBold", "../fonts/RobotoBold/RobotoBold", bold);
-
 /* NORMALIZE ================================================ */
 
 .btn.focus, .btn:focus {
