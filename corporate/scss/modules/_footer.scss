@@ -1,0 +1,35 @@
+.footer {
+	padding: 15px 0;
+	.copyright {
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+
+	.small-title {
+		margin-bottom: 0;
+		font-family: $font-family-base;
+		font-size: 0.875rem;
+	}
+
+	.social-icons {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.footer {
+		padding-bottom: 45px;
+
+		.copyright {
+			font-size: 0.75rem;
+		}
+
+		.small-title {
+			font-size: 0.75rem;
+		}
+
+		.follow-block {
+			margin-bottom: 10px;
+		}
+	}
+}

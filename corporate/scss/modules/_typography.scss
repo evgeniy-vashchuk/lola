@@ -1,0 +1,33 @@
+.section-descr-title {
+	font-size: 3.375rem;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.3;
+	margin-bottom: 3.4375rem;
+}
+
+.section-title {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 300;
+	font-size: 1.875rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.875rem;
+
+	&-decoration {
+		margin-bottom: 2.5rem;
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 80px;
+			height: 2px;
+			background-color: $primary;
+			margin-right: 30px;
+		}
+	}
+}

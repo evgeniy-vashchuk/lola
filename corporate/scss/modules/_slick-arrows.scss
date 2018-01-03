@@ -1,0 +1,35 @@
+.slider-arrows {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	z-index: 15;
+	overflow: hidden;
+	bottom: 50px;
+	right: 0;
+	transform: translate(100%, 0);
+	.prev-arrow {
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.slider-arrows {
+		bottom: -50px;
+		left: 0;
+		right: auto;
+		transform: translate(0, 0);
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.slider-arrows {
+		bottom: -40px;
+		.prev-arrow {
+			margin-bottom: 10px;
+		}
+	}
+}

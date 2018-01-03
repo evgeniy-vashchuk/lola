@@ -1,0 +1,47 @@
+@import "vars";
+@import "mixins";
+
+/* FONTS ================================================ */
+
+/* NORMALIZE ================================================ */
+
+.btn.focus, .btn:focus {
+	box-shadow: none;
+}
+
+input, select, textarea {
+	outline: none;
+}
+
+ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+a:focus, button:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+.btn {
+	&:focus,
+	&:active,
+	&:focus:active,
+	&:not([disabled]):not(.disabled):active {
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+input[type="submit"] {
+	cursor: pointer;
+}
+
+body {
+	min-width: 320px;
+	position: relative;
+	font-weight: 300;
+	line-height: 1.7;
+	overflow-x: hidden;
+	opacity: 1;
+}
