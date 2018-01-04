@@ -23,6 +23,26 @@
 	}
 }
 
+@media only screen and (max-width: 767px) {
+	.btn {
+		&-md {
+			min-width: 120px;
+			min-height: 40px;
+			padding: 0.625rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.btn {
+		&-md {
+			min-width: 100px;
+			min-height: 30px;
+			padding: 0.3125rem;
+		}
+	}
+}
+
 .btn-underline {
 	display: inline-block;
 	text-decoration: none;
@@ -32,10 +52,11 @@
 	transition: .35s;
 	position: relative;
 	margin-bottom: 0.625rem;
+	line-height: 1.5;
 
 	&:hover {
-		color: $primary;
 		&:after {
+			width: 100%;
 			background-color: $primary;
 		}
 	}
@@ -50,6 +71,21 @@
 		bottom: 0;
 		left: 0;
 		transition: 0.3s;
+	}
+
+	&-white {
+		color: $white;
+		&:after {
+			background-color: $white;
+		}
+
+		&:hover {
+			color: $white;
+			&:after {
+				background-color: $white;
+				width: 100%;
+			}
+		}
 	}
 }
 

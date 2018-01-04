@@ -23,6 +23,10 @@
 				.navbar-nav {
 					.nav-link {
 						color: $white;
+
+						&.active {
+							text-shadow: 1px 0 0 $white;
+						}
 					}
 				}
 			}
@@ -90,7 +94,7 @@
 
 			&.active {
 				color: $primary;
-				font-weight: 700;
+				text-shadow: 1px 0 0 $primary;
 				opacity: 1;
 			}
 		}
@@ -129,6 +133,7 @@
 
 			.nav-link {
 				font-size: 1.2rem;
+				line-height: 1.7;
 			}
 		}
 	}

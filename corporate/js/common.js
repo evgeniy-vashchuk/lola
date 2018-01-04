@@ -1,5 +1,24 @@
 $(document).ready(function() {
 
+	// CLIPPING TEXT WITH 3 DOTS
+	$(function() {
+		$('.services-post-description').succinct({
+			size: 230
+		});
+
+		$('.services-post-title').succinct({
+			size: 120
+		});
+
+		$('.news-item .section-title').succinct({
+			size: 80
+		});
+
+		$('.news-item .text-block p').succinct({
+			size: 200
+		});
+	});
+
 	// SMOOTH TRANSITION BETWEEN PAGES
 	$(document).on("click", ".page-redirect", function(e) { 
 		e.preventDefault();
