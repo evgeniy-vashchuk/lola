@@ -146,8 +146,8 @@ $(document).ready(function() {
 	getScrollBarWidth();
 
 	// GALLERY POP-UP INIT
-	$('.gallery-pop-up').slickLightbox({
-		itemSelector: '.square-block',
+	$('.gallery-items-wrap').slickLightbox({
+		itemSelector: '.gallery-photo',
 		navigateByKeyboard: true,
 		background: "rgba(255,255,255,.9)",
 	})
@@ -275,7 +275,7 @@ $(document).ready(function() {
 	})
 
 	// COUNT UP NUMBERS
-	$.each($('.achievements-items-wrap .section-title'), function () {
+	$.each($('.achievements-items-wrap .achievements-number'), function () {
 		var options = {
 			useEasing: true, 
 			useGrouping: true, 
@@ -343,3 +343,48 @@ $(window).on('load', function () {
 	}
 
 });
+
+// GOOGLE MAP =================================
+var map;
+
+function initMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: {lat: 37.779287, lng: -122.429109},
+		zoom: 15,
+		disableDefaultUI: true,
+		zoomControl: false,
+		zoomControlOptions: {
+			position: google.maps.ControlPosition.LEFT_CENTER
+		},
+		styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]
+	});
+
+
+	var marker = new google.maps.Marker({
+		position: {lat: 37.779287, lng: -122.429109},
+		map: map,
+		icon: 'img/map_icon.png',
+	});
+
+	// KEEP THE CENTER CENTERED ON WINDOW RESIZE
+	var center = map.getCenter();
+
+	google.maps.event.addDomListener(window, "resize", function() {
+		google.maps.event.trigger(map, "resize");
+		map.setCenter(center);
+	});
+
+	$('.map-icon').on('click' , function() {
+		google.maps.event.trigger(map, 'resize');
+		map.setCenter(center);
+		return false;
+	});
+
+}
+
+
+
+
+
+
+

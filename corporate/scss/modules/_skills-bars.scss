@@ -7,8 +7,8 @@
 	align-items: flex-end;
 	margin-bottom: 10px;
 
-	.small-title {
-		flex-basis: 120px;
+	.section-title {
+		flex-basis: 150px;
 		padding-right: 15px;
 		margin-bottom: 0;
 		line-height: 1;
@@ -19,6 +19,7 @@
 		width: 100%;
 		flex-basis: 0;
 		flex-grow: 1;
+		margin-bottom: 5px;
 	}
 }
 
@@ -49,5 +50,21 @@
 		left: -2px;
 		background-color: $primary;
 		z-index: 1;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.skills-bars-item {
+		.section-title {
+			flex-basis: 120px;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.skills-bars-item {
+		.section-title {
+			flex-basis: 100px;
+		}
 	}
 }

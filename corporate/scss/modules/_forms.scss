@@ -1,11 +1,11 @@
 /* FORMS ============================ */
 
 .form-control {
-	height: 50px;
+	height: 45px;
 }
 
 textarea.form-control {
-	height: 100px;
+	height: 130px;
 	resize: none;
 	padding-top: 15px;
 	display: block;
@@ -96,4 +96,46 @@ textarea:focus~.bar:before {
 
 .form-label-help {
 	padding-top: 5px;
+}
+
+
+// SUBSCRIBE BLOCK
+
+.subscribe-form {
+	position: relative;
+	input[type="email"] {
+		padding-right: 25px;
+	}
+	.submit-icon {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0px;
+		width: 25px;
+		height: 100%;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		margin-bottom: 0;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		z-index: 5;
+		cursor: pointer;
+		&:hover {
+			span {
+				color: $primary;
+				transition: color 0.3s ease;
+			}
+		}
+		span {
+			font-size: 1.25rem;
+			color: $body-color;
+			transition: color 0.3s ease;
+		}
+	}
 }
