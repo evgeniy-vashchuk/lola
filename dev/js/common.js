@@ -29,6 +29,10 @@ $(document).ready(function() {
 		}
 	})
 
+	// REDIRECT FOR TABS
+	var servicessTabHash = window.location.hash;
+	$('.services-tabs .nav-link[href="' + servicessTabHash + '"]').tab('show');
+
 	// height of top line
 	var topLineHeight = $('.header').outerHeight();
 

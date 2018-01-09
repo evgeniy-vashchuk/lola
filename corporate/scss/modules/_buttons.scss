@@ -21,6 +21,19 @@
 		min-width: 150px;
 		min-height: 60px;
 	}
+
+	&-sm {
+		min-width: 200px;
+		min-height: 50px;
+		font-weight: 700;
+		font-size: 0.875rem;
+	}
+
+	&-transparent {
+		background-color: transparent;
+		border-color: $secondary;
+		color: $secondary;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -86,6 +99,10 @@
 				width: 100%;
 			}
 		}
+	}
+
+	&-lg {
+		font-size: 1rem;
 	}
 }
 

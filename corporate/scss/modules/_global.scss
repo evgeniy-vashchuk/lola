@@ -45,6 +45,21 @@ body {
 	&-lg {
 		max-width: calc(415px + 7px);
 	}
+
+	&-bottom {
+		padding-right: 0;
+		padding-bottom: 7px;
+		&:after {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 2px;
+			width: 80px;
+			background-color: $primary;
+		}
+	}
 }
 
 .section {

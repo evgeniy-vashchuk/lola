@@ -1,6 +1,7 @@
 .tab-text-content {
+	margin-bottom: 1rem;
 	p {
-		margin-bottom: 1rem;
+		margin-bottom: 0.625rem;
 	}
 }
 
@@ -13,8 +14,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 10px 0;
 		transition: 0.3s;
+		margin-bottom: 1.5625rem;
 		&.active {
 			&:hover {
 				color: $primary;
@@ -46,13 +47,9 @@
 			opacity: 0;
 			display: inline-block;
 		}
-
-		.nav-tab-icon {
-			font-size: 3.1rem;
-			margin-right: 25px;
-		}
-		.small-title {
+		.section-title {
 			margin-bottom: 0;
+			line-height: 1;
 		}
 	}
 }
@@ -61,11 +58,7 @@
 @media only screen and (max-width: 991px) {
 	.nav-pills {
 		.nav-link {
-			.nav-tab-icon {
-				font-size: 2rem;
-				margin-right: 10px;
-			}
-
+			margin-bottom: 1rem;
 			.arrow {
 				margin-right: 15px;
 			}

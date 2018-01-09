@@ -507,16 +507,16 @@
 		margin-bottom: 1rem;
 	}
 
-	.img-decoration {
-		overflow: hidden;
-	}
-
-	.img-decoration-wrap {
-		margin-bottom: 50px;
-	}
-
 	.gallery-items-wrap {
 		margin-bottom: 25px;
+	}
+}
+
+.gallery-item {
+	margin-bottom: 50px;
+
+	.img-decoration {
+		overflow: hidden;
 	}
 }
 
@@ -525,10 +525,10 @@
 		.section-descr-title {
 			margin-bottom: 2.5rem;
 		}
+	}
 
-		.img-decoration-wrap {
-			margin-bottom: 30px;
-		}
+	.gallery-item {
+		margin-bottom: 30px;
 	}
 }
 
@@ -549,10 +549,10 @@
 		.section-descr-title {
 			margin-bottom: 1rem;
 		}
+	}
 
-		.img-decoration-wrap {
-			margin-bottom: 20px;
-		}
+	.gallery-item {
+		margin-bottom: 20px;
 	}
 }
 

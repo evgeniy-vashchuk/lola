@@ -48,3 +48,15 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 575px) {
+	.social-icons {
+		&-lg {
+			li {
+				span {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}

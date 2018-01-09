@@ -159,6 +159,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
+  xl: 1200px
 
 ) !default;
 
@@ -174,6 +175,7 @@ $container-max-widths: (
   sm: 550px,
   md: 730px,
   lg: 970px,
+  xl: 1150px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
