@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url(../libs/icomoon/style.css);
+@import url(../libs/slick/slick.css);
 @import url(../libs/slick-lightbox/slick-lightbox.css);
 :root {
   --blue: #007bff;
