@@ -1,0 +1,162 @@
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 0;
+	text-align: center;
+	position: relative;
+	outline: none;
+	transition: .35s;
+	border: 2px solid transparent;
+	&:hover {
+		text-decoration: none;
+	}
+
+	&-primary {
+		color: #191919;
+
+		&:hover {
+			border-color: $secondary;
+		}
+	}
+
+	&-secondary {
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	&-md {
+		min-width: 160px;
+		text-transform: uppercase;
+		font-style: italic;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.btn {
+		&-md {
+			font-size: 1rem;
+			min-width: 140px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.btn {
+		&-md {
+			font-size: 0.875rem;
+			min-width: 120px;
+			padding: 0.625rem;
+		}
+	}
+}
+
+.btn-underline {
+	display: inline-block;
+	text-decoration: none;
+	font-weight: 700;
+	position: relative;
+	outline: none;
+	transition: .35s;
+	position: relative;
+	margin-bottom: 0.625rem;
+	line-height: 1.5;
+
+	&:hover {
+		&:after {
+			width: 100%;
+			background-color: $primary;
+		}
+	}
+
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 20px;
+		height: 2px;
+		background-color: $secondary;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transition: 0.3s;
+	}
+
+	&-white {
+		color: $white;
+		&:after {
+			background-color: $white;
+		}
+
+		&:hover {
+			color: $white;
+			&:after {
+				background-color: $white;
+				width: 100%;
+			}
+		}
+	}
+
+	&-lg {
+		font-size: 1rem;
+	}
+}
+
+.btn-arrow {
+	transition: 0.3s;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	text-align: center;
+
+	span {
+		font-size: 22px;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&-fixed {
+		background-color: #E9E9E9;
+		position: fixed;
+		bottom: 0;
+		right: 90px;
+		z-index: 100;
+		transform: translate(0, 100%);
+		&:hover {
+			border-color: transparent;
+			background-color: darken(#E9E9E9, 30%);
+		}
+	}
+
+	&.btn-visible {
+		transform: translate(0, 0);
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.btn-arrow {
+		&-fixed {
+			right: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.btn-arrow {
+		width: 35px;
+		height: 35px;
+		span {
+			font-size: 14px;
+		}
+
+		&-fixed {
+			bottom: 0px;
+			right: 15px;
+			transform: translate(calc(100% + 15px), 0);
+		}
+	}
+}

@@ -1,0 +1,199 @@
+body {
+	position: relative;
+}
+
+.main-wrap {
+	position: relative;
+	z-index: 10;
+}
+
+.main-page {
+	padding-top: 70px;
+}
+
+.img-wrap-l {
+	padding-right: 30px;
+}
+
+.img-wrap-r {
+	padding-left: 30px;
+	.img-block {
+		margin-left: auto;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.img-wrap-l, .img-wrap-r {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.img-md {
+	max-width: 400px;
+	margin-bottom: 1rem;
+	img {
+		@include img-res;
+	}
+}
+
+.photo-with-quotes {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 5px;
+
+	.quotes {
+		font-weight: 700;
+		font-size: 9.375rem;
+		color: #e5e5e5;
+		line-height: 1;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		line-height: 0.66;
+		cursor: default;
+	}
+
+	&-right {
+		padding-right: 60px;
+		.quotes {
+			right: 0;
+		}
+	}
+
+	&-left {
+		padding-left: 60px;
+		.quotes {
+			left: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.photo-with-quotes {
+		.quotes {
+			font-size: 8rem;
+		}
+
+		&-right {
+			padding-right: 50px;
+		}
+
+		&-left {
+			padding-left: 50px;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.photo-with-quotes {
+		.quotes {
+			font-size: 6rem;
+		}
+
+		&-right {
+			padding-right: 40px;
+		}
+
+		&-left {
+			padding-left: 40px;
+		}
+	}
+}
+
+.photo-with-social {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+
+	.social-icons {
+		position: absolute;
+		bottom: 0;
+	}
+
+	&-right {
+		padding-right: 20px;
+		.social-icons {
+			right: 0;
+		}
+	}
+
+	&-left {
+		padding-left: 20px;
+		.social-icons {
+			left: 0;
+		}
+	}
+}
+
+.img-decoration {
+	position: relative;
+
+	&-md {
+		max-width: 155px;
+		&:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			width: 5px;
+			height: 66.66666%;
+			background-color: $primary;
+		}
+	}
+
+	&-right {
+		padding-right: 5px;
+		&:after {
+			right: 0;
+		}
+	}
+
+	&-left {
+		padding-left: 5px;
+		&:after {
+			left: 0;
+		}
+	}
+
+	img {
+		@include img-res;
+	}
+}
+
+.section {
+	padding: 50px 0;
+}
+
+@media only screen and (max-width: 767px) {
+	.section {
+		padding: 40px 0;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.section {
+		padding: 25px 0;
+	}
+}
+
+.section-wrapper {
+	position: relative;
+
+	.section-title-canvas {
+		z-index: 1;
+	}
+}
+
+.section-title-canvas {
+	position: absolute;
+	top: 0;
+	bottom: -100px;
+	right: 0;
+	left: 0;
+}
+
+.section-content {
+	position: relative;
+	z-index: 5;
+}

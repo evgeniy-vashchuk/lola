@@ -1,0 +1,150 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-height: 100%;
+	overflow: auto;
+	z-index: 100;
+
+	.header-container {
+		transition: 0.3s;
+
+		&.small {
+			.navbar {
+				padding-top: 0.625rem;
+				padding-bottom: 0.625rem;
+			}
+		}
+		&.filled {
+			background-color: $secondary;
+			.navbar {
+				.navbar-nav {
+					.nav-link {
+						color: rgba($white, 0.7);
+
+						&:hover {
+							color: $primary;
+						}
+
+						&.active {
+							color: $white;
+						}
+					}
+				}
+			}
+
+			.navbar-brand {
+				.logo-text {
+					color: $white;
+				}
+			}
+
+			.navbar-icon {
+				background-color: $white;
+			}
+		}
+	}
+
+	&-menu {
+		font-size: 0;
+		margin-bottom: 0;
+		li {
+			display: inline-block;
+			margin-left: 1.25rem;
+			&:first-child {
+				margin-left: 0;
+			}
+			a {
+				color: $body-color;
+				opacity: 0.5;
+				transition: 0.3s;
+				font-size: 1rem;
+				letter-spacing: 1.6px;
+				&:hover {
+					opacity: 1;
+				}
+
+				&.active {
+					color: $primary;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.navbar {
+	transition: 0.5s;
+	.navbar-nav {
+		.nav-item {
+			margin-left: 20px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+		.nav-link {
+			padding: 0;
+			color: $gray;
+			transition: 0.3s;
+			display: inline-block;
+			font-size: 0.825rem;
+			border-bottom: 2px solid transparent;
+			&:hover {
+				color: $primary;
+			}
+
+			&.active {
+				color: #333333;
+				border-bottom: 2px solid $primary;
+			}
+		}
+	}
+}
+
+.header-page {
+	.navbar-collapse {
+		.navbar-nav {
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+		.nav-item {
+			margin-left: 0;
+			text-align: right;
+		}
+
+		.nav-link {
+			font-size: 1.2rem;
+			line-height: 1.7;
+		}
+	}
+}
+
+// menu on home page
+@media only screen and (max-width: 991px) {
+	.header-home {
+		.navbar-collapse {
+			.navbar-nav {
+				padding-top: 20px;
+				padding-bottom: 10px;
+			}
+			.nav-item {
+				margin-left: 0;
+				text-align: right;
+			}
+
+			.nav-link {
+				font-size: 1.2rem;
+				line-height: 1.7;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.navbar {
+		padding-top: 0.625rem;
+		padding-bottom: 0.625rem;
+	}
+}

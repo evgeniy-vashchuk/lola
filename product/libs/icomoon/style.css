@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon/icomoon.eot?s4meo0");
+  src: url("../../fonts/icomoon/icomoon.eot?s4meo0#iefix") format("embedded-opentype"), url("../../fonts/icomoon/icomoon.ttf?s4meo0") format("truetype"), url("../../fonts/icomoon/icomoon.woff?s4meo0") format("woff"), url("../../fonts/icomoon/icomoon.svg?s4meo0#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-right-arrow:before {
+  content: ""; }
+
+.icon-up-arrow:before {
+  content: ""; }
+
+.icon-left-arrow:before {
+  content: ""; }
+
+.icon-down-arrow:before {
+  content: ""; }
+
+.icon-instagram:before {
+  content: ""; }
+
+.icon-advantages_icon_2:before {
+  content: ""; }
+
+.icon-advantages_icon_3:before {
+  content: ""; }
+
+.icon-advantages_icon_4:before {
+  content: ""; }
+
+.icon-advantages_icon_5:before {
+  content: ""; }
+
+.icon-advantages_icon_6:before {
+  content: ""; }
+
+.icon-advantages_icon_1:before {
+  content: ""; }
+
+.icon-chevron-arrow-down:before {
+  content: ""; }
+
+.icon-arrows:before {
+  content: ""; }
+
+.icon-full-screen:before {
+  content: ""; }
+
+.icon-send-button:before {
+  content: ""; }
+
+.icon-envelope:before {
+  content: ""; }
+
+.icon-telephone:before {
+  content: ""; }
+
+.icon-close:before {
+  content: ""; }
+
+.icon-plus:before {
+  content: ""; }
+
+.icon-google:before {
+  content: ""; }
+
+.icon-facebook:before {
+  content: ""; }
+
+.icon-twitter:before {
+  content: ""; }
+
+.icon-skype:before {
+  content: ""; }

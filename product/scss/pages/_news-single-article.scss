@@ -1,0 +1,300 @@
+// SECTION BLOG INSIDE
+
+.section-news-inside {
+	.blog-inside-main-img {
+		margin-bottom: 30px;
+	}
+
+	.news-inside-title {
+		padding-right: 30px;
+		.title-of-topic {
+			margin-bottom: 1.25rem;
+		}
+	}
+
+	.news-inside-main-text {
+		p {
+			margin-bottom: 1.5625rem;
+		}
+	}
+
+	.follow-block {
+		margin-bottom: 1rem;
+	}
+
+	.works-photos-block {
+		.img-decoration {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.section-news-inside {
+		.news-inside-title {
+			padding-right: 15px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.section-news-inside {
+		.news-inside-main-text {
+			p {
+				margin-bottom: 1rem;
+			}
+		}
+
+		.blog-inside-main-img {
+			margin-bottom: 20px;
+		}
+
+		.works-photos-block {
+			.img-decoration {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.section-news-inside {
+		.news-inside-main-img {
+			margin-bottom: 15px;
+		}
+
+		.news-inside-title {
+			padding-right: 0;
+			margin-bottom: 10px;
+			.title-of-topic {
+				margin-bottom: 0.825rem;
+			}
+		}
+
+		.works-photos-block {
+			.img-decoration {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+.quote-block {
+	background-color: #E6E6E6;
+	padding: 1.5625rem 2.5rem;
+	position: relative;
+	&:before {
+		content: "“";
+		display: inline-block;
+		position: absolute;
+		text-indent: -7px;
+	}
+
+	&:after {
+		content: "“";
+		display: inline-block;
+		position: absolute;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.quote-block {
+		padding: 1rem;
+	}
+}
+
+.navigation-block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.news-nav-prev, .news-nav-next {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		transition: 0.3s;
+		.btn-arrow {
+			color: $primary;
+		}
+	}
+
+	.small-title {
+		margin-bottom: 0;
+		font-weight: 700;
+	}
+}
+
+.news-nav-prev {
+	padding-right: 0.625rem;
+	.btn-arrow {
+		margin-right: 1.25rem;
+	}
+}
+
+.news-nav-next {
+	text-align: right;
+	padding-left: 0.625rem;
+	.btn-arrow {
+		margin-left: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.news-nav-prev {
+		.btn-arrow {
+			margin-right: 0.625rem;
+		}
+	}
+
+	.news-nav-next {
+		.btn-arrow {
+			margin-left: 0.625rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.news-nav-prev, .news-nav-next {
+		.small-title {
+			font-size: 0.85rem;
+		}
+	}
+}
+
+// SECTION BLOG INSIDE END
+
+// SECTION COMMENTS
+
+.section-comments {
+
+	&.section {
+		padding-top: 0;
+	}
+	.section-comments-title {
+		.section-title {
+			margin-bottom: 3.125rem;
+			display: inline-block;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.section-comments {
+		.section-comments-title {
+			.section-title {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}
+
+.avatar-block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding-right: 30px;
+	margin-bottom: 10px;
+
+	.comment-name-wrap {
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+
+	.comment-name {
+		font-size: 1rem;
+		font-weight: 700;
+		transition: 0.3s;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.avatar-block {
+		padding-right: 15px;
+	}
+}
+
+.avatar-photo-wrap {
+	max-width: 60px;
+	flex-basis: 60px;
+	margin-right: 20px;
+	img {
+		@include img-res;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.avatar-photo-wrap {
+		margin-right: 15px;
+	}
+}
+
+.comment-info {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.comment-item {
+	margin-bottom: 25px;
+
+	&-answered {
+		.comment-text {
+			padding-left: 50px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.comment-item-answered {
+		.comment-text {
+			padding-left: 30px;
+		}
+	}
+}
+
+// SECTION COMMENTS END
+
+// SECTION LEAVE A COMMENT
+
+.section-leave-comment {
+	&.section {
+		padding-top: 0;
+	}
+	form {
+		width: 100%;
+	}
+
+	.form-group {
+		width: 100%;
+	}
+
+	textarea.form-control {
+		min-height: 100px;
+		height: 100%;
+	}
+
+	.form-group-bm {
+		margin-bottom: 40px;
+	}
+}
+
+// SECTION LEAVE A COMMENT END

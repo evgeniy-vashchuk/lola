@@ -1,0 +1,194 @@
+.main-page-title {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.75rem;
+	text-transform: uppercase;
+	line-height: 1;
+	letter-spacing: -3px;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 991px) {
+	.main-page-title {
+		font-size: 3.2rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.main-page-title {
+		font-size: 2.5rem;
+		margin-bottom: 5px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.main-page-title {
+		font-size: 1.8rem;
+	}
+}
+
+.section-title {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 100;
+	font-size: 9.375rem;
+	letter-spacing: -7.5px;
+	color: $primary;
+	text-transform: uppercase;
+	writing-mode: tb-rl;
+	margin: 0;
+	line-height: 0.5;
+	opacity: 0.5;
+	padding-right: 40px;
+}
+
+@media only screen and (max-width: 991px) {
+	.section-title {
+		font-size: 8.5rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.section-title {
+		font-size: 8rem;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.section-title {
+		font-size: 5rem;
+	}
+}
+
+.section-title-text {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3rem;
+	text-transform: uppercase;
+	line-height: 1;
+	letter-spacing: -2.4px;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 991px) {
+	.section-title-text {
+		font-size: 2.5rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.section-title-text {
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.section-title-text {
+		font-size: 1.5rem;
+		margin-bottom: 5px;
+	}
+}
+
+.title-description {
+	font-size: 1.25rem;
+	font-weight: 600;
+	font-style: italic;
+	text-transform: uppercase;
+	line-height: 24px;
+	letter-spacing: -1px;
+	margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 991px) {
+	.title-description {
+		font-size: 1rem;
+		margin-bottom: 30px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.title-description {
+		line-height: 20px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.title-description {
+		margin-bottom: 10px;
+	}
+}
+
+.items-sub-title {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -1.2px;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	padding-right: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+	.items-sub-title {
+		font-size: 1.2rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.items-sub-title {
+		font-size: 1rem;
+		margin-bottom: 5px;
+	}
+}
+
+.italic-sub-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	font-style: italic;
+	text-transform: uppercase;
+	line-height: 24px;
+	letter-spacing: -1px;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 575px) {
+	.italic-sub-title {
+		font-size: 1rem;
+	}
+}
+
+.gray-text {
+	color: $gray;
+}
+
+.accent-text {
+	color: $primary;
+}
+
+@media only screen and (max-width: 767px) {
+	p {
+		margin-bottom: 0.625rem;
+	}
+}
+
+.text-block {
+	padding-right: 60px;
+}
+
+@media only screen and (max-width: 991px) {
+	.text-block {
+		padding-right: 40px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.text-block {
+		padding-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.text-block {
+		padding-right: 0;
+	}
+}

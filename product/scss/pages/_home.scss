@@ -1,0 +1,259 @@
+// SECTION WELCOME
+
+.section-welcome {
+	&.section {
+		padding-top: 130px;
+	}
+
+	.img-block {
+		margin-bottom: 0;
+	}
+
+	.welcome-content-wrap {
+		margin-bottom: 75px;
+	}
+}
+
+.contacts-list {
+	color: $gray;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+	li {
+		flex-basis: 33.3333%;
+		padding-right: 15px;
+		margin-bottom: 15px;
+		overflow: hidden;
+	}
+	a {
+		color: $gray;
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	&-title {
+		margin-right: 5px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.section-welcome {
+		.welcome-content-wrap {
+			margin-bottom: 50px;
+		}
+	}
+
+	.contacts-list {
+		&-title {
+			display: block;
+			margin-right: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.section-welcome {
+		&.section {
+			padding-top: 100px;
+		}
+
+		.img-block {
+			margin-bottom: 30px;
+		}
+	}
+
+	.contacts-list {
+		margin-bottom: 20px;
+		li {
+			flex-basis: 50%;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.section-welcome {
+		&.section {
+			padding-top: 80px;
+		}
+
+		.img-block {
+			margin-bottom: 15px;
+		}
+
+		.welcome-content-wrap {
+			margin-bottom: 25px;
+		}
+	}
+
+	.contacts-list {
+		li {
+			flex-basis: 100%;
+		}
+	}
+}
+
+// SECTION WELCOME END
+
+// SECTION ABOUT
+
+@media only screen and (max-width: 575px) {
+	.section-about {
+		.text-block {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+// SECTION ABOUT END
+
+// SECTION ADVANTAGES
+
+.section-advantages {
+	.img-block {
+		margin-bottom: 300px;
+	}
+}
+
+.review-item {
+	.gray-text {
+		margin-bottom: 10px;
+	}
+}
+
+.review-item-r {
+	text-align: right;
+	.italic-sub-title {
+		padding-right: 2px;
+	}
+
+	.review-text-r {
+		padding-right: 2px;
+	}
+}
+
+.review-text-l {
+	padding-right: 20px;
+}
+
+.review-text-r {
+	padding-left: 20px;
+}
+
+.advantages-item {
+	margin-bottom: 45px;
+	.advantages-item-icon {
+		font-size: 55px;
+		margin-bottom: 15px;
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.advantages-item {
+		margin-bottom: 30px;
+		.advantages-item-icon {
+			font-size: 40px;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.advantages-item {
+		margin-bottom: 20px;
+	}
+
+	.section-advantages {
+		.img-block {
+			margin-bottom: 20px;
+		}
+	}
+
+	.review-text-l {
+		padding-right: 0;
+	}
+
+	.review-text-r {
+		padding-left: 0;
+	}
+}
+
+// SECTION ADVANTAGES END
+
+// SECTION TECHNOLOGY
+
+.technology-items-wrap {
+	.technology-item:last-child {
+		margin-bottom: 0;
+		.technology-item-text-block {
+			padding-bottom: 180px;
+		}
+	}
+}
+
+.technology-item {
+	margin-bottom: 50px;
+
+	.img-block {
+		margin-bottom: 0;
+	}
+
+	.technology-item-text-block {
+		padding-top: 45px;
+	}
+}
+
+.section-technology {
+	.review-item-wrap {
+		margin-top: -165px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.section-technology {
+		.review-item-wrap {
+			margin-top: -100px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.technology-item {
+		margin-bottom: 40px;
+
+		.technology-item-text-block {
+			padding-top: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.section-technology {
+		.title-description {
+			margin-bottom: 30px;
+		}
+
+		.review-item-wrap {
+			margin-top: 0;
+		}
+	}
+
+	.technology-item {
+		margin-bottom: 20px;
+	}
+
+	.technology-items-wrap {
+		.technology-item:last-child {
+			margin-bottom: 20px;
+			.technology-item-text-block {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+// SECTION TECHNOLOGY END
