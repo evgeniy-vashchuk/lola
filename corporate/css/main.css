@@ -7605,6 +7605,8 @@ input[type="submit"] {
   .map-wrap #map {
     width: 100%;
     height: 100%; }
+  .map-wrap .gm-style-cc {
+    display: none; }
 
 @media only screen and (max-width: 991px) {
   .map-wrap {
@@ -8808,45 +8810,6 @@ textarea:focus ~ .bar:before {
       -ms-transform: translate(100%, 0);
           transform: translate(100%, 0); }
 
-.slider-arrows {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  z-index: 15;
-  overflow: hidden;
-  bottom: 50px;
-  right: 0;
-  -webkit-transform: translate(100%, 0);
-      -ms-transform: translate(100%, 0);
-          transform: translate(100%, 0); }
-  .slider-arrows .prev-arrow {
-    margin-bottom: 20px; }
-
-@media only screen and (max-width: 1200px) {
-  .slider-arrows {
-    bottom: -50px;
-    left: 0;
-    right: auto;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0); } }
-
-@media only screen and (max-width: 575px) {
-  .slider-arrows {
-    bottom: -40px; }
-    .slider-arrows .prev-arrow {
-      margin-bottom: 10px; } }
-
 .preloader-wrapper {
   background-color: #fff;
   display: -webkit-box;
@@ -9266,5 +9229,63 @@ body {
   .instagram-board-icon {
     color: #fff;
     font-size: 1.3rem; }
+
+.html-marker {
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+  position: relative;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+  .html-marker:before, .html-marker:after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    -webkit-border-radius: 12px;
+            border-radius: 12px;
+    background-color: #E80000;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation: pulse-me 3s linear infinite;
+            animation: pulse-me 3s linear infinite; }
+  .html-marker:after {
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s; }
+
+@-webkit-keyframes pulse-me {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; }
+  50% {
+    opacity: 0.25; }
+  70% {
+    opacity: 0.09; }
+  100% {
+    -webkit-transform: scale(3.5);
+            transform: scale(3.5);
+    opacity: 0; } }
+
+@keyframes pulse-me {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; }
+  50% {
+    opacity: 0.25; }
+  70% {
+    opacity: 0.09; }
+  100% {
+    -webkit-transform: scale(3.5);
+            transform: scale(3.5);
+    opacity: 0; } }
 
 /*# sourceMappingURL=main.css.map */

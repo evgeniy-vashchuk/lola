@@ -683,6 +683,11 @@
 		width: 100%;
 		height: 100%;
 	}
+
+	// DO NOT SHOW LABEL ON GOOGLE MAP
+	.gm-style-cc {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 991px) {

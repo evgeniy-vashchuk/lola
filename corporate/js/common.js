@@ -246,6 +246,7 @@ $(window).on('load', function () {
 			// animation text
 			textAnimation();
 			textAnimationBottom();
+
 		}, 2000);
 
 	} else {
@@ -256,17 +257,82 @@ $(window).on('load', function () {
 			// animation text
 			textAnimation();
 			textAnimationBottom();
+
 		}, 500);
 	}
 
 });
 
 // GOOGLE MAP =================================
+
 var map;
 
 function initMap() {
+
+	// CUSTOM HTML MARKER =============================
+	function CustomMarker(latlng, map, args) {
+		this.latlng = latlng;
+		this.args = args;
+		this.setMap(map);
+	}
+
+	CustomMarker.prototype = new google.maps.OverlayView();
+
+	CustomMarker.prototype.draw = function() {
+
+		var self = this;
+
+		var div = this.div;
+
+		if (!div) {
+
+			div = this.div = document.createElement('div');
+
+			div.className = 'html-marker';
+
+			div.style.position = 'absolute';
+			div.style.cursor = 'pointer';
+			div.style.width = '12px';
+			div.style.height = '12px';
+			div.style.background = '#E80000';
+			
+			if (typeof(self.args.marker_id) !== 'undefined') {
+				div.dataset.marker_id = self.args.marker_id;
+			}
+			
+			google.maps.event.addDomListener(div, "click", function(event) {
+				// marker click
+				google.maps.event.trigger(self, "click");
+			});
+			
+			var panes = this.getPanes();
+			panes.overlayImage.appendChild(div);
+		}
+		
+		var point = this.getProjection().fromLatLngToDivPixel(this.latlng);
+		
+		if (point) {
+			div.style.left = (point.x - 6) + 'px';
+			div.style.top = (point.y - 12) + 'px';
+		}
+	};
+
+	CustomMarker.prototype.remove = function() {
+		if (this.div) {
+			this.div.parentNode.removeChild(this.div);
+			this.div = null;
+		}
+	};
+
+	CustomMarker.prototype.getPosition = function() {
+		return this.latlng;
+	};
+	// CUSTOM HTML MARKER =============================
+
+	var mapMarkerPosition = new google.maps.LatLng(37.779287,-122.429109);
+
 	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 37.779287, lng: -122.429109},
+		center: mapMarkerPosition,
 		zoom: 15,
 		disableDefaultUI: true,
 		zoomControl: false,
@@ -274,13 +340,6 @@ function initMap() {
 			position: google.maps.ControlPosition.LEFT_CENTER
 		},
 		styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]
-	});
-
-
-	var marker = new google.maps.Marker({
-		position: {lat: 37.779287, lng: -122.429109},
-		map: map,
-		icon: 'img/map_icon.png',
 	});
 
 	// KEEP THE CENTER CENTERED ON WINDOW RESIZE
@@ -291,16 +350,11 @@ function initMap() {
 		map.setCenter(center);
 	});
 
-	$('.map-icon').on('click' , function() {
-		google.maps.event.trigger(map, 'resize');
-		map.setCenter(center);
-		return false;
-	});
+	overlay = new CustomMarker(
+		mapMarkerPosition, 
+		map,
+		{
+			marker_id: '123'
+		}
+	);
 }
-
-
-
-
-
-
-
